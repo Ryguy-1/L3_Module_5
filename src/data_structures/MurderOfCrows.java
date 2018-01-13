@@ -35,8 +35,6 @@ public class MurderOfCrows {
 			
     		Crow p = theMurder.get(i);
     		
-    		
-    		
     		if(p.getStomachContents().contains("diamond")) {
     			
     			System.out.println(p.getName());

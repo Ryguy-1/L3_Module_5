@@ -17,10 +17,26 @@ public class TestMatchingBrackets {
 		assertFalse(doBracketsMatch("{{}"));
 		assertFalse(doBracketsMatch("}{"));
 	}
-
+	Stack<Character> stack = new Stack <Character>();
+	String check = "";
 	// USE A STACK TO COMPLETE THE METHOD FOR CHECKING IF EVERY OPENING BRACKET HAS A MATCHING CLOSING BRACKET
 	private boolean doBracketsMatch(String b) {
-		return false;
+		for (int i = 0; i < b.length(); i++) {
+			if(b.charAt(i)=='{') {
+				stack.push(b.charAt(i));
+				
+			}else if(b.charAt(i)=='}'){
+				stack.pop();
+			}
+		}
+		if(stack.isEmpty()) {
+			
+			return true;
+			
+		}else {
+			return false;
+		}
+		
 	}
 
 }
