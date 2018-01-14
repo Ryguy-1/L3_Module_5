@@ -11,6 +11,7 @@ public class ThreadedNumberSorter {
 	public static void parallelSort(int[] nums) {
 		long startTime = System.nanoTime();
 		//Complete this method starting at this point
+		int[] organize = new int[TOTAL_NUMS];
 		
 		
 		long totalTime = System.nanoTime() - startTime;
